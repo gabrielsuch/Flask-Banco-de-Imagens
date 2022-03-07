@@ -1,6 +1,11 @@
 from flask import Flask, jsonify, request, send_file, safe_join
 import os
 import zipfile
+
+
+os.makedirs("image", exist_ok=True)
+
+
 from app.kenzie.image import get_all_files
 
 
@@ -14,6 +19,9 @@ file_directory = os.getenv("FILES_DIRECTORY")
 extensions = os.getenv("ALLOWED_EXTENSIONS")
 directory = os.listdir(file_directory)
 
+os.makedirs("image/jpg", exist_ok=True)
+os.makedirs("image/png", exist_ok=True)
+os.makedirs("image/gif", exist_ok=True)
 
 @app.get("/files")
 def list_files():
