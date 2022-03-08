@@ -59,7 +59,7 @@ def upload():
 @app.get("/download/<file_name>")
 def download(file_name):
     for dir in DIRECTORY:
-        path = os.listdir(f"image/{dir}")
+        path = os.listdir(f"{FILES_DIRECTORY}/{dir}")
         abspath = os.path.abspath(FILES_DIRECTORY)
 
         for files in path:
