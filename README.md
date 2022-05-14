@@ -3,7 +3,7 @@
 
 Rubrica - E6 - Banco de imagens
 
-| Critérios	| Avaliações | Pts |
+| Critérios	| Descrição | Pts |
 |---|---|---|
 | POST /upload JPG - 201 | Subir a imagem JPG menor que 1MB para o sistema e retornar uma mensagem de sucesso e status code 201. | 1.0 pts |
 |POST /upload - Nome de arquivo ja existente - 409|  Ao tentar subir uma imagem com um nome ja existente no sistema, retornar uma mensagem de error e status code 409.| 1.0 pts|
